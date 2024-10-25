@@ -1,0 +1,97 @@
+  
+  
+  BURNING:
+   Display: '&cBurning'
+   MinLevel: 1
+   MaxLevel: 3
+   Rarity: COMMON
+   EnchantableItems:
+   - DIAMOND_SWORD
+   - NETHERITE_SWORD
+   Skills:
+   - ignite{ticks=100} @trigger ~onAttack ?enchantLevel{level=1}
+   - ignite{ticks=200} @trigger ~onAttack ?enchantLevel{level=2}
+   - ignite{ticks=300} @trigger ~onAttack ?enchantLevel{level=3}
+
+  SMITE:
+   Display: '&6Thunder'
+   MinLevel: 1
+   MaxLevel: 3
+   Rarity: RARE
+   EnchantableItems:
+   - DIAMOND_SWORD
+   - NETHERITE_SWORD
+   Skills:
+   - lightning @trigger ~onAttack ?enchantLevel{level=1}
+   - lightning @trigger ~onAttack ?enchantLevel{level=2}
+   - lightning @target ~onAttack ?enchantLevel{level=3} 
+ 
+  FireballArrow:
+   Display: '&6FireBall Shot'
+   MinLevel: 1
+   MaxLevel: 1
+   Rarity: LEGENDARY
+   EnchantableItems:
+   - BOW
+   Skills:
+   - shootfireball{y=3;v=8} @target ~onShoot 
+  
+  SWINGOFGODS:
+   Display: '&eSwing Of The Gods'
+   MinLevel: 1
+   MaxLevel: 1
+   Rarity: LEGENDARY
+   EnchantableItems:
+   - DIAMOND_SWORD
+   - NETHERITE_SWORD
+   Skills:
+   - stun{d=45;f=false} @target ~onAttack
+  HEROBRINE:
+   Display: '&bHero''s Protection'
+   MinLevel: 1
+   MaxLevel: 1
+   Rarity: LEGENDARY
+   EnchantableItems:
+   - DIAMOND_CHESTPLATE
+   - NETHERITE_CHESTPLATE
+   - GOLD_CHESTPLATE
+   Skills:
+   - shield{amount=1;maxShield=15;d=1000} @self ~onDamaged
+   - ...
+  GroundZSmash:
+   Display: '&dGroundSmash'
+   MinLevel: 1
+   MaxLevel: 1
+   Rarity: LEGENDARY
+   EnchantableItems:
+   - DIAMOND_SWORD
+   - NETHERITE_SWORD
+   Skills:
+   - throw{velocity=5;velocityY=5} @PIR{r=10} ~onAttack
+   - damage{a=50;i=false} @PIR{r=10} ~onAttack
+   - effect:particles{p=hugeexplode;a=5;vs=0.5;hs=0.5;s=0;y=1} @Self ~onAttack
+   - effect:sound{s=entity.generic.explode;v=2;p=0.5} @Self ~onAttack
+   - effect:sound{s=entity.generic.explode;v=2;p=1;repeat=7;repeatInterval=2} @Self ~onAttack
+   - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=1} @Self ~onAttack
+   - delay 2
+   - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=3} @Self ~onAttack
+   - delay 2
+   - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=5} @Self ~onAttack
+   - delay 2 
+   - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=7} @Self ~onAttack
+   - delay 2
+   - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=9} @Self ~onAttack
+   - delay 2
+   - effect:particlering{p=largeexplode;a=40;vs=0.5;hs=0.5;s=0;y=0.3;points=20;radius=11} @Self ~onAttack
+  
+  Radiation:
+    Display: '&2Radiation Poisoning'
+    MinLevel: 1
+    MaxLevel: 1
+    Rarity: LEGENDARY
+    Skills:
+    - ignite{ticks=300} @target ~onDamaged
+    - potion{type=POSION;duration=200;level=2} @target ~onDamaged
+    - potion{type=NAUSEA;duration=200;level=1} @target ~onDamaged
+   
+   
